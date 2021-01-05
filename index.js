@@ -13,6 +13,10 @@ const config = require('./config.json');
  * @return {boolean} If it was logged successfuly
  */
 function log(message, fileName) {
+
+    if (!message) throw new Error("Missing \"message\"");
+    if (!fileName) throw new Error("Missing \"fileName\"");
+
     let time = moment().format("HH:mm:ss");
     let format = `[${time}] ${message}`;
 

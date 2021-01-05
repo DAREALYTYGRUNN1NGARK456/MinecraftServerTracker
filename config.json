@@ -9,5 +9,5 @@
         "play.bluefox.tech",
         "play.pvpvoyage.com"
     ],
-    "interval": 60000
+    "interval": 5000
 }
