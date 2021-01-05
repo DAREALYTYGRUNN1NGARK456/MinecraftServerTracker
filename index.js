@@ -43,20 +43,18 @@ function log(message, fileName) {
  */
 function track(host, timeout) {
     setInterval(function() {
-        util.status(host)
+        util.status(host.host, { port: host.port || 25565, enableSRV: host.srv || true, timeout: host.timeout || 5000 })
             .then((response) => {
-                log(`[${response.host}:${response.port}] Players: ${response.onlinePlayers}/${response.maxPlayers}`, host.toLowerCase());
+                log(`[${response.host}:${response.port}] Players: ${response.onlinePlayers}/${response.maxPlayers}`, (host.host).toLowerCase());
             })
             .catch(() => {
-                log(`[${host}] An error has occured when trying to fetch server status`, host.toLowerCase());
+                log(`[${host.host}] An error has occured when trying to fetch server status`, (host.host).toLowerCase());
             });
     }, timeout)
 }
 
 let hosts = config.hosts;
-if (!hosts) {
-    console.error("\"hosts\" is missing in \"config.json\"");
-    process.exit(1);
-}
+if (!hosts) throw new Error("\"hosts\" is missing in \"config.json\"");
 
+// Start pinging hosts
 hosts.forEach(s => track(s, config.interval));

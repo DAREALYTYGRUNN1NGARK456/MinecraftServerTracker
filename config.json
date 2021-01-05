@@ -1,13 +1,11 @@
 {
     "hosts": [
-        "decimatemc.com",
-        "play.reclusepvp.com",
-        "galacticpvp.me",
-        "play.blizzardmc.org",
-        "play.exoduspvp.org",
-        "play.astropvp.net",
-        "play.bluefox.tech",
-        "play.pvpvoyage.com"
+        {
+            "host": "play.reclusepvp.com",
+            "port": 25565,
+            "timeout": 5000,
+            "srv": false
+        },
     ],
-    "interval": 5000
+    "interval": 6000
 }
