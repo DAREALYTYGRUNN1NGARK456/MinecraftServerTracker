@@ -1,0 +1,19 @@
+{
+  "name": "minecraftservertracker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "minecraft-server-util": "^3.1.0"
+  },
+  "dependencies": {
+    "moment": "^2.29.1",
+    "moment-duration-format": "^2.3.2"
+  }
+}

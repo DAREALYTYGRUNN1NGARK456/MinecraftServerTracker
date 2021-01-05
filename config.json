@@ -1,0 +1,13 @@
+{
+    "hosts": [
+        "decimatemc.com",
+        "play.reclusepvp.com",
+        "galacticpvp.me",
+        "play.blizzardmc.org",
+        "play.exoduspvp.org",
+        "play.astropvp.net",
+        "play.bluefox.tech",
+        "play.pvpvoyage.com"
+    ],
+    "interval": 60000
+}
